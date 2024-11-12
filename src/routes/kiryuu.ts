@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import { HTTPException } from 'hono/http-exception'
-import getKiryuuFeedUseCase from "../usecases/kiryuu/getKiyuuFeedUseCase";
+import getKiryuuFeedUseCase from "../usecases/kiryuu/getKiryuuFeedUseCase";
 import getKiryuuSeriesUseCase from "../usecases/kiryuu/getKiryuuSeriesUseCase";
 import getKiryuuChapterUseCase from "../usecases/kiryuu/getKiryuuChapterUseCase";
 

@@ -3,6 +3,7 @@ import kiryuu from "./routes/kiryuu"
 import { AxiosError } from "axios"
 import { HTTPException } from "hono/http-exception"
 import { bearerAuth } from "hono/bearer-auth"
+import mangasusu from "./routes/mangasusu"
 
 const app = new Hono()
 
@@ -37,6 +38,7 @@ app.get("/", (c) => {
 app.use('*', bearerAuth({ token: Bun.env.API_KEY || "token" }))
 
 app.route("/kiryuu", kiryuu)
+app.route("/mangasusu", mangasusu)
 
 export default {
 	fetch: app.fetch,
